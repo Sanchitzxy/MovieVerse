@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# MovieVerse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Discover and track movies you love — browse curated carousels, view details, and manage your watchlist in a clean, responsive UI.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Modern React UI with reusable components
+- Hero banner and curated carousels for recommendations and trending movies
+- Movie cards with quick actions and modal details
+- Auth-friendly UI stubs (login modal, user profile)
+- Responsive sidebars for navigation and contextual content
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React (Create React App)
+- React DOM
+- Testing Library + Jest (setup included)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the dev server:
+   ```bash
+   npm start
+   ```
+   - App will be available at `http://localhost:3000`.
+3. Run tests:
+   ```bash
+   npm test
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scripts
 
-### `npm run build`
+- `npm start`: Run development server
+- `npm test`: Run tests in watch mode
+- `npm run build`: Production build to `build/`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```text
+movieverse/
+  public/           # Static assets and HTML template
+  src/
+    components/     # Reusable UI components
+    data/           # Static data for movies/recommendations
+    App.js          # Root app component
+    index.js        # Entry point
+  package.json
+  README.md
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Key components under `src/components/`:
+- `Header.jsx`: Top navigation bar
+- `HeroBanner.jsx`: Prominent hero section
+- `MovieCarousel.jsx`, `RecommendationCarousel.jsx`: Horizontal carousels
+- `MovieCard.jsx`: Poster, title, and quick actions
+- `MovieModal.jsx`: Detailed info in a modal
+- `LeftSidebar.jsx`, `RightSidebar.jsx`: Complementary navigation/content
+- `LoginModal.jsx`, `UserProfile.jsx`: Auth-related UI stubs
 
-### `npm run eject`
+## Environment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project does not require secrets by default. If you introduce APIs later, prefer `.env.local` files (already ignored by git).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Fork the repo and create a feature branch
+- Use clear commit messages (conventional commits recommended)
+- Open a PR with a descriptive title and summary
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Roadmap
 
-## Learn More
+- Integrate real movie API (TMDB or similar)
+- Add search, filters, and genres
+- Persist user watchlist and ratings
+- Improve accessibility and keyboard navigation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source under the MIT License.
